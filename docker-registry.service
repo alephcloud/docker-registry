@@ -1,0 +1,14 @@
+[Unit]
+Description=Docker registry
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+ExecStartPre=-/usr/bin/docker rm -f docker-registry
+ExecStart=/usr/bin/docker run --rm --name docker-registry --volume /media/state/docker-registry:/media/host --env SETTINGS_FLAVOR=prod docker-registry
+ExecStop=/usr/bin/docker stop docker-registry
+
+[Install]
+WantedBy=local.target
+
