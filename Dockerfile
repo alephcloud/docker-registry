@@ -3,8 +3,8 @@
 # AUTHOR:         Sam Alba <sam@docker.com>
 # AUTHOR:         Irene Knapp <irene.knapp@icloud.com>
 # DESCRIPTION:    Image with docker-registry project and dependecies
-# TO_BUILD:       docker build -rm -t registry .
-# TO_RUN:         docker run -v /media/state/docker-registry:/media/host registry
+# TO_BUILD:       docker build -rm -t docker-registry .
+# TO_RUN:         docker run -v /media/state/docker-registry:/media/host docker-registry
 
 FROM debian-stable
 
